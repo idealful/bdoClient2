@@ -1,0 +1,26 @@
+{
+  "name": "app4",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:staging": "vite build --mode staging",
+    "build:production": "vite build --mode production",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^9.6.6",
+    "vue": "^3.2.25",
+    "vue-i18n": "^9.2.0-beta.29",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15",
+    "vite": "^2.7.2"
+  }
+}
