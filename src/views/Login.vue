@@ -41,9 +41,13 @@ const setClientId = () => {
     return meta.name === 'google-signin-client_id';
   });
 
-  if (env.VITE_APP_ENV === 'prodution') {
+  const viteAppEnv = env.VITE_APP_ENV;
+
+  if (viteAppEnv !== 'local') {
     googleSignInClientId[0].content = '594148934886-8r4mg69f4ol2iq5momgfp0b7smvi5m08.apps.googleusercontent.com';
   }
+
+  console.log(`${viteAppEnv}, ${googleSignInClientId[0].content}`);
 };
 
 const loginUser = (googleUser) => {
