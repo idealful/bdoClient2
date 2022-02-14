@@ -1,9 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import NotFound from '../views/NotFound.vue';
 import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import Menu1 from '../views/Menu1.vue';
 
 const routes = [
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
+  },
+  {
+    path: '/404',
+    name: 'notFound',
+    component: NotFound,
+  },
   {
     path: '/',
     name: 'Home',
