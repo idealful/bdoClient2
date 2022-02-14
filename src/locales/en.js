@@ -36,6 +36,8 @@ const en = {
     openMainMenus: 'Open Main Menus',
     changeLanguage: 'Change Language',
     socialLogin: 'Social Login',
+    useremail: 'User email',
+    username: 'User name',
   },
 };
 

@@ -38,6 +38,8 @@ const ko = {
     openMainMenus: '메인 메뉴 열기',
     changeLanguage: '언어 변경',
     socialLogin: '소셜 로그인',
+    useremail: '이메일',
+    username: '이름',
   },
 };
 

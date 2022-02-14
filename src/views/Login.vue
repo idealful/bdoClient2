@@ -22,6 +22,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
   window.gapi.signin2.render('google-signin-btn', { onsuccess: loginUser });
+  setClientId();
 });
 
 // Vuex
@@ -30,7 +31,21 @@ const store = useStore();
 
 import log from '../assets/js/log';
 
+// env
+const env = import.meta.env;
+
 // event handler
+const setClientId = () => {
+  const metas = document.querySelectorAll('meta');
+  const googleSignInClientId = Array.from(metas).filter((meta) => {
+    return meta.name === 'google-signin-client_id';
+  });
+
+  if (env.VITE_APP_ENV === 'prodution') {
+    googleSignInClientId[0].content = '594148934886-8r4mg69f4ol2iq5momgfp0b7smvi5m08.apps.googleusercontent.com';
+  }
+};
+
 const loginUser = (googleUser) => {
   try {
     const profile = googleUser.getBasicProfile();

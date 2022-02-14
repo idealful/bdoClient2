@@ -254,14 +254,18 @@
 </template>
 
 <script setup>
+// Reactive
 import { reactive } from 'vue';
 
+// Vuex
 import { useStore } from 'vuex';
 const store = useStore();
 
+// Components
 import Aside from './components/Aside.vue';
 import Footer from './components/Footer.vue';
 
+// log
 import log from './assets/js/log';
 
 // i18n
