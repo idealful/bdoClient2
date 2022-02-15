@@ -49,7 +49,7 @@
             </div>
             <div class="hidden md:block">
               <div class="ml-4 flex items-center md:ml-6">
-                <div class="ml-3">
+                <div class="ml-3 relative">
                   <div v-show="!store.state.user.isLogin">
                     <router-link
                       :to="t('memberMenus[0].key')"
@@ -57,8 +57,6 @@
                       >{{ t('memberMenus[0].value') }}</router-link
                     >
                   </div>
-                </div>
-                <div class="ml-3">
                   <div v-show="store.state.user.isLogin">
                     <button
                       type="button"
@@ -73,43 +71,44 @@
                       /></a>
                     </button>
                   </div>
+                  <!-- profile, setting, logout -->
                   <div
-                    class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-black ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-black"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="user-menu-button"
                     tabindex="-1"
                     v-show="menu.isUserMenu"
                   >
-                    <!-- profile -->
                     <span>
                       <router-link
                         :to="t('userMenus[0].key')"
                         class="block px-4 py-2 text-sm text-gray-500 hover:text-white hover:bg-gray-700"
                         role="menuitem"
                         tabindex="-1"
+                        id="user-menu-item-0"
                       >
                         {{ t('userMenus[0].value') }}
                       </router-link>
                     </span>
-                    <!-- setting -->
                     <span>
                       <router-link
                         :to="t('userMenus[1].key')"
                         class="block px-4 py-2 text-sm text-gray-500 hover:text-white hover:bg-gray-700"
                         role="menuitem"
                         tabindex="-1"
+                        id="user-menu-item-1"
                       >
                         {{ t('userMenus[1].value') }}
                       </router-link>
                     </span>
-                    <!-- logout -->
                     <span>
                       <a
                         href="#"
                         class="block px-4 py-2 text-sm text-gray-500 hover:text-white hover:bg-gray-700"
                         role="menuitem"
                         tabindex="-1"
+                        id="user-menu-item-2"
                         @click="logoutUser"
                       >
                         {{ t('userMenus[2].value') }}
