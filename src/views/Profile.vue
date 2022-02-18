@@ -27,18 +27,29 @@ const { t } = useI18n();
 
 // LifeCycle
 import { onMounted } from 'vue';
-
-onMounted(() => {});
+onMounted(() => {
+  apiGetProfiles();
+});
 
 // Vuex
 import { useStore } from 'vuex';
 const store = useStore();
+
+// Mixin
+import mixin from '../assets/js/mixins';
+const { $api, $log } = mixin.methods;
 
 // Reactive
 import { reactive } from 'vue';
 
 // user
 const user = reactive(store.state.user);
+
+// apiGetProfiles
+const apiGetProfiles = async () => {
+  const result = await $api('get', `/api/profiles/${user.id}`, {});
+  $log(result, 'apiGetProfiles', store.state.isDebug);
+};
 </script>
 
 <style></style>

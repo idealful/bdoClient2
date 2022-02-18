@@ -5,6 +5,7 @@ import './assets/css/index.css'; // tailwindcss
 
 import router from './router'; // router
 import store from './assets/js/store'; // vuex
+import mixins from './assets/js/mixins'; // mixin
 
 import { createI18n } from 'vue-i18n';
 import { en } from './locales/en';
@@ -20,5 +21,6 @@ const i18n = createI18n({
 const app = createApp(App);
 app.use(router);
 app.use(store);
+app.mixin(mixins);
 app.use(i18n);
 app.mount('#app');
