@@ -17,7 +17,7 @@ const { t } = useI18n();
 
 // menu
 const menu = {
-  name: 'mainMenus[1].value',
+  name: 'menu.main.menu1.name',
 };
 </script>
 

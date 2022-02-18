@@ -10,38 +10,38 @@
                 <div class="ml-10 flex items-baseline space-x-4">
                   <span>
                     <router-link
-                      :to="t(messages.menuMain0Key)"
+                      :to="t(messages.menu.main.home.url)"
                       class="hover:cursor-pointer bg-gray-900 text-white block px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t(messages.menuMain0Value) }}
+                      {{ t(messages.menu.main.home.name) }}
                     </router-link>
                   </span>
                   <span>
                     <router-link
-                      :to="t(messages.menuMain1Key)"
+                      :to="t(messages.menu.main.menu1.url)"
                       class="hover:cursor-pointer text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t(messages.menuMain1Value) }}
+                      {{ t(messages.menu.main.menu1.name) }}
                     </router-link>
                   </span>
                   <span>
                     <router-link
-                      :to="t(messages.menuMain2Key)"
+                      :to="t(messages.menu.main.menu2.url)"
                       class="hover:cursor-pointer text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t(messages.menuMain2Value) }}
+                      {{ t(messages.menu.main.menu2.name) }}
                     </router-link>
                   </span>
                   <span>
                     <router-link
-                      :to="t(messages.menuMain3Key)"
+                      :to="t(messages.menu.main.menu3.url)"
                       class="hover:cursor-pointer text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t(messages.menuMain3Value) }}
+                      {{ t(messages.menu.main.menu3.name) }}
                     </router-link>
                   </span>
                 </div>
@@ -52,9 +52,9 @@
                 <div class="ml-3 relative">
                   <div v-show="!store.state.user.isLogin">
                     <router-link
-                      :to="t(messages.menuMember0Key)"
+                      :to="t(messages.menu.user.login.url)"
                       class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                      >{{ t(messages.menuMember0Value) }}</router-link
+                      >{{ t(messages.menu.user.login.name) }}</router-link
                     >
                   </div>
                   <div v-show="store.state.user.isLogin">
@@ -65,7 +65,7 @@
                       aria-expanded="false"
                       aria-haspopup="true"
                     >
-                      <span class="sr-only">{{ t(messages.openUserMenus) }}</span>
+                      <span class="sr-only">{{ t(messages.openMenuUser) }}</span>
                       <a href="#" @click="toggleIsUserMenu">
                         <img class="h-8 w-8 rounded-full" :src="store.state.user.imgUrl" :alt="store.state.user.email"
                       /></a>
@@ -82,24 +82,24 @@
                   >
                     <span>
                       <router-link
-                        :to="t(messages.menuUser0Key)"
+                        :to="t(messages.menu.user.profile.url)"
                         class="block px-4 py-2 text-sm text-gray-500 hover:text-white hover:bg-gray-700"
                         role="menuitem"
                         tabindex="-1"
                         id="user-menu-item-0"
                       >
-                        {{ t(messages.menuUser0Value) }}
+                        {{ t(messages.menu.user.profile.name) }}
                       </router-link>
                     </span>
                     <span>
                       <router-link
-                        :to="t(messages.menuUser1Key)"
+                        :to="t(messages.menu.user.setting.url)"
                         class="block px-4 py-2 text-sm text-gray-500 hover:text-white hover:bg-gray-700"
                         role="menuitem"
                         tabindex="-1"
                         id="user-menu-item-1"
                       >
-                        {{ t(messages.menuUser1Value) }}
+                        {{ t(messages.menu.user.setting.name) }}
                       </router-link>
                     </span>
                     <span>
@@ -111,7 +111,7 @@
                         id="user-menu-item-2"
                         @click="logoutUser"
                       >
-                        {{ t(messages.menuUser2Value) }}
+                        {{ t(messages.menu.user.logout.name) }}
                       </a>
                     </span>
                   </div>
@@ -125,7 +125,7 @@
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
-                <span class="sr-only">{{ t(messages.openMainMenus) }}</span>
+                <span class="sr-only">{{ t(messages.openMenuMain) }}</span>
                 <svg
                   class="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,35 +155,35 @@
           <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <span>
               <router-link
-                :to="t(messages.menuMain0Key)"
+                :to="t(messages.menu.main.home.url)"
                 class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
               >
-                {{ t(messages.menuMain0Value) }}
+                {{ t(messages.menu.main.home.name) }}
               </router-link>
             </span>
             <span>
               <router-link
-                :to="t(messages.menuMain1Key)"
+                :to="t(messages.menu.main.menu1.url)"
                 class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
-                >{{ t(messages.menuMain1Value) }}
+                >{{ t(messages.menu.main.menu1.name) }}
               </router-link>
             </span>
             <span>
               <router-link
-                :to="t(messages.menuMain2Key)"
+                :to="t(messages.menu.main.menu2.url)"
                 class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
-                >{{ t(messages.menuMain2Value) }}
+                >{{ t(messages.menu.main.menu2.name) }}
               </router-link>
             </span>
             <span>
               <router-link
-                :to="t(messages.menuMain3Key)"
+                :to="t(messages.menu.main.menu3.url)"
                 class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
-                >{{ t(messages.menuMain3Value) }}
+                >{{ t(messages.menu.main.menu3.name) }}
               </router-link>
             </span>
           </div>
@@ -200,25 +200,25 @@
             <div class="mt-3 px-2 space-y-1">
               <div>
                 <router-link
-                  :to="t(messages.menuMember0Key)"
+                  :to="t(messages.menu.user.login.url)"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                   v-show="!store.state.user.isLogin"
-                  >{{ t(messages.menuMember0Value) }}</router-link
+                  >{{ t(messages.menu.user.login.name) }}</router-link
                 >
               </div>
               <div v-show="store.state.user.isLogin">
                 <div>
                   <router-link
-                    :to="t(messages.menuUser0Key)"
+                    :to="t(messages.menu.user.profile.url)"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                    >{{ t(messages.menuUser0Value) }}</router-link
+                    >{{ t(messages.menu.user.profile.name) }}</router-link
                   >
                 </div>
                 <div>
                   <router-link
-                    :to="t(messages.menuUser1Key)"
+                    :to="t(messages.menu.user.setting.url)"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                    >{{ t(messages.menuUser1Value) }}</router-link
+                    >{{ t(messages.menu.user.setting.name) }}</router-link
                   >
                 </div>
                 <div>
@@ -226,7 +226,7 @@
                     href="#"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                     @click="logoutUser"
-                    >{{ t(messages.menuUser2Value) }}</a
+                    >{{ t(messages.menu.user.logout.name) }}</a
                   >
                 </div>
               </div>
@@ -281,25 +281,51 @@ const menu = reactive({
 
 // messages
 const messages = {
+  menu: {
+    main: {
+      home: {
+        url: 'menu.main.home.url',
+        name: 'menu.main.home.name',
+      },
+      menu1: {
+        url: 'menu.main.menu1.url',
+        name: 'menu.main.menu1.name',
+      },
+      menu2: {
+        url: 'menu.main.menu2.url',
+        name: 'menu.main.menu2.name',
+      },
+      menu3: {
+        url: 'menu.main.menu3.url',
+        name: 'menu.main.menu3.name',
+      },
+    },
+    user: {
+      login: {
+        url: 'menu.user.login.url',
+        name: 'menu.user.login.name',
+      },
+      join: {
+        url: 'menu.user.join.url',
+        name: 'menu.user.join.name',
+      },
+      profile: {
+        url: 'menu.user.profile.url',
+        name: 'menu.user.profile.name',
+      },
+      setting: {
+        url: 'menu.user.setting.url',
+        name: 'menu.user.setting.name',
+      },
+      logout: {
+        url: 'menu.user.logout.url',
+        name: 'menu.user.logout.name',
+      },
+    },
+  },
   greeting: 'messages.greeting',
-  menuMain0Key: 'mainMenus[0].key',
-  menuMain0Value: 'mainMenus[0].value',
-  menuMain1Key: 'mainMenus[1].key',
-  menuMain1Value: 'mainMenus[1].value',
-  menuMain2Key: 'mainMenus[2].key',
-  menuMain2Value: 'mainMenus[2].value',
-  menuMain3Key: 'mainMenus[3].key',
-  menuMain3Value: 'mainMenus[3].value',
-  menuMember0Key: 'memberMenus[0].key',
-  menuMember0Value: 'memberMenus[0].value',
-  openUserMenus: 'messages.openUserMenus',
-  menuUser0Key: 'userMenus[0].key',
-  menuUser0Value: 'userMenus[0].value',
-  menuUser1Key: 'userMenus[1].key',
-  menuUser1Value: 'userMenus[1].value',
-  menuUser2Key: 'userMenus[2].key',
-  menuUser2Value: 'userMenus[2].value',
-  openMainMenus: 'messages.openMainMenus',
+  openMenuMain: 'messages.openMenuMain',
+  openMenuUser: 'messages.openMenuUser',
   myProfileImage: 'messages.myProfileImage',
 };
 

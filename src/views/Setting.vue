@@ -34,7 +34,7 @@ const activeLanguage = {
 
 // menu
 const menu = {
-  name: 'userMenus[1].value',
+  name: 'menu.user.setting.name',
 };
 
 // event handler
