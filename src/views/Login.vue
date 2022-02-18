@@ -2,7 +2,7 @@
   <article>
     <section class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <div class="px-4 py-6 sm:px-0">
-        <div class="text-gray-500 text-center border-4 border-dashed border-gray-200 rounded-lg h-screen">
+        <div class="border-4 border-dashed border-gray-200 rounded-lg h-screen text-gray-500">
           <h1 class="text-5xl py-4">{{ t('memberMenus[0].value') }}</h1>
           <h5 class="py-2">{{ t('messages.socialLogin') }}</h5>
           <div class="flex justify-center" id="google-signin-btn" v-show="!store.state.user.isLogin"></div>
