@@ -38,6 +38,7 @@ const en = {
     socialLogin: 'Social Login',
     useremail: 'User email',
     username: 'User name',
+    copyright: 'Copyright {now} {author} All rights reserved.',
   },
 };
 

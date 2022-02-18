@@ -5,43 +5,43 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-16">
             <div class="flex items-center">
-              <div class="flex-shrink-0 text-gray-500">{{ t('messages.greeting') }}</div>
+              <div class="flex-shrink-0 text-gray-500">{{ t(messages.greeting) }}</div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <span>
                     <router-link
-                      :to="t('mainMenus[0].key')"
+                      :to="t(messages.menuMain0Key)"
                       class="hover:cursor-pointer bg-gray-900 text-white block px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t('mainMenus[0].value') }}
+                      {{ t(messages.menuMain0Value) }}
                     </router-link>
                   </span>
                   <span>
                     <router-link
-                      :to="t('mainMenus[1].key')"
+                      :to="t(messages.menuMain1Key)"
                       class="hover:cursor-pointer text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t('mainMenus[1].value') }}
+                      {{ t(messages.menuMain1Value) }}
                     </router-link>
                   </span>
                   <span>
                     <router-link
-                      :to="t('mainMenus[2].key')"
+                      :to="t(messages.menuMain2Key)"
                       class="hover:cursor-pointer text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t('mainMenus[2].value') }}
+                      {{ t(messages.menuMain2Value) }}
                     </router-link>
                   </span>
                   <span>
                     <router-link
-                      :to="t('mainMenus[3].key')"
+                      :to="t(messages.menuMain3Key)"
                       class="hover:cursor-pointer text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       aria-current="page"
                     >
-                      {{ t('mainMenus[3].value') }}
+                      {{ t(messages.menuMain3Value) }}
                     </router-link>
                   </span>
                 </div>
@@ -52,9 +52,9 @@
                 <div class="ml-3 relative">
                   <div v-show="!store.state.user.isLogin">
                     <router-link
-                      :to="t('memberMenus[0].key')"
+                      :to="t(messages.menuMember0Key)"
                       class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                      >{{ t('memberMenus[0].value') }}</router-link
+                      >{{ t(messages.menuMember0Value) }}</router-link
                     >
                   </div>
                   <div v-show="store.state.user.isLogin">
@@ -65,7 +65,7 @@
                       aria-expanded="false"
                       aria-haspopup="true"
                     >
-                      <span class="sr-only">{{ t('messages.openUserMenus') }}</span>
+                      <span class="sr-only">{{ t(messages.openUserMenus) }}</span>
                       <a href="#" @click="toggleIsUserMenu">
                         <img class="h-8 w-8 rounded-full" :src="store.state.user.imgUrl" :alt="store.state.user.email"
                       /></a>
@@ -82,24 +82,24 @@
                   >
                     <span>
                       <router-link
-                        :to="t('userMenus[0].key')"
+                        :to="t(messages.menuUser0Key)"
                         class="block px-4 py-2 text-sm text-gray-500 hover:text-white hover:bg-gray-700"
                         role="menuitem"
                         tabindex="-1"
                         id="user-menu-item-0"
                       >
-                        {{ t('userMenus[0].value') }}
+                        {{ t(messages.menuUser0Value) }}
                       </router-link>
                     </span>
                     <span>
                       <router-link
-                        :to="t('userMenus[1].key')"
+                        :to="t(messages.menuUser1Key)"
                         class="block px-4 py-2 text-sm text-gray-500 hover:text-white hover:bg-gray-700"
                         role="menuitem"
                         tabindex="-1"
                         id="user-menu-item-1"
                       >
-                        {{ t('userMenus[1].value') }}
+                        {{ t(messages.menuUser1Value) }}
                       </router-link>
                     </span>
                     <span>
@@ -111,7 +111,7 @@
                         id="user-menu-item-2"
                         @click="logoutUser"
                       >
-                        {{ t('userMenus[2].value') }}
+                        {{ t(messages.menuUser2Value) }}
                       </a>
                     </span>
                   </div>
@@ -125,7 +125,7 @@
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
-                <span class="sr-only">{{ t('messages.openMainMenus') }}</span>
+                <span class="sr-only">{{ t(messages.openMainMenus) }}</span>
                 <svg
                   class="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -155,46 +155,42 @@
           <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <span>
               <router-link
-                :to="t('mainMenus[0].key')"
+                :to="t(messages.menuMain0Key)"
                 class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
               >
-                {{ t('mainMenus[0].value') }}
+                {{ t(messages.menuMain0Value) }}
               </router-link>
             </span>
             <span>
               <router-link
-                :to="t('mainMenus[1].key')"
+                :to="t(messages.menuMain1Key)"
                 class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
-                >{{ t('mainMenus[1].value') }}
+                >{{ t(messages.menuMain1Value) }}
               </router-link>
             </span>
             <span>
               <router-link
-                :to="t('mainMenus[2].key')"
+                :to="t(messages.menuMain2Key)"
                 class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
-                >{{ t('mainMenus[2].value') }}
+                >{{ t(messages.menuMain2Value) }}
               </router-link>
             </span>
             <span>
               <router-link
-                :to="t('mainMenus[3].key')"
+                :to="t(messages.menuMain3Key)"
                 class="text-gray-500 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 aria-current="page"
-                >{{ t('mainMenus[3].value') }}
+                >{{ t(messages.menuMain3Value) }}
               </router-link>
             </span>
           </div>
           <div class="pt-4 pb-3 border-t border-gray-700">
             <div class="flex items-center px-5" v-show="store.state.user.isLogin">
               <div class="flex-shrink-0">
-                <img
-                  class="h-10 w-10 rounded-full"
-                  :src="store.state.user.imgUrl"
-                  :alt="t('messages.myProfileImage')"
-                />
+                <img class="h-10 w-10 rounded-full" :src="store.state.user.imgUrl" :alt="t(messages.myProfileImage)" />
               </div>
               <div class="ml-3">
                 <div class="text-base font-medium leading-none text-gray-500">{{ store.state.user.name }}</div>
@@ -204,25 +200,25 @@
             <div class="mt-3 px-2 space-y-1">
               <div>
                 <router-link
-                  :to="t('memberMenus[0].key')"
+                  :to="t(messages.menuMember0Key)"
                   class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                   v-show="!store.state.user.isLogin"
-                  >{{ t('memberMenus[0].value') }}</router-link
+                  >{{ t(messages.menuMember0Value) }}</router-link
                 >
               </div>
               <div v-show="store.state.user.isLogin">
                 <div>
                   <router-link
-                    :to="t('userMenus[0].key')"
+                    :to="t(messages.menuUser0Key)"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                    >{{ t('userMenus[0].value') }}</router-link
+                    >{{ t(messages.menuUser0Value) }}</router-link
                   >
                 </div>
                 <div>
                   <router-link
-                    :to="t('userMenus[1].key')"
+                    :to="t(messages.menuUser1Key)"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                    >{{ t('userMenus[1].value') }}</router-link
+                    >{{ t(messages.menuUser1Value) }}</router-link
                   >
                 </div>
                 <div>
@@ -230,7 +226,7 @@
                     href="#"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                     @click="logoutUser"
-                    >{{ t('userMenus[2].value') }}</a
+                    >{{ t(messages.menuUser2Value) }}</a
                   >
                 </div>
               </div>
@@ -282,6 +278,30 @@ const menu = reactive({
   isUserMenu: false,
   isMainMenuMobile: true,
 });
+
+// messages
+const messages = {
+  greeting: 'messages.greeting',
+  menuMain0Key: 'mainMenus[0].key',
+  menuMain0Value: 'mainMenus[0].value',
+  menuMain1Key: 'mainMenus[1].key',
+  menuMain1Value: 'mainMenus[1].value',
+  menuMain2Key: 'mainMenus[2].key',
+  menuMain2Value: 'mainMenus[2].value',
+  menuMain3Key: 'mainMenus[3].key',
+  menuMain3Value: 'mainMenus[3].value',
+  menuMember0Key: 'memberMenus[0].key',
+  menuMember0Value: 'memberMenus[0].value',
+  openUserMenus: 'messages.openUserMenus',
+  menuUser0Key: 'userMenus[0].key',
+  menuUser0Value: 'userMenus[0].value',
+  menuUser1Key: 'userMenus[1].key',
+  menuUser1Value: 'userMenus[1].value',
+  menuUser2Key: 'userMenus[2].key',
+  menuUser2Value: 'userMenus[2].value',
+  openMainMenus: 'messages.openMainMenus',
+  myProfileImage: 'messages.myProfileImage',
+};
 
 // event handler
 const documentClickEvent = () => {

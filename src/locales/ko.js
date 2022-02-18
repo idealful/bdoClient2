@@ -40,6 +40,7 @@ const ko = {
     socialLogin: '소셜 로그인',
     useremail: '이메일',
     username: '이름',
+    copyright: 'Copyright {now} 이곳의 모든 저작권은 {author}에게 있습니다.',
   },
 };
 
